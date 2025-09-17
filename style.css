@@ -173,3 +173,112 @@ body {
     margin: 10px 0;
   }
 }
+
+/* Events Page Layout */
+.events-page {
+  padding: 40px 20px;
+  background-color: #fafafa;
+}
+
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+/* Card Style */
+.card {
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.card h2 {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  color: #1a1a2e;
+}
+
+/* Prayer Meetings */
+.meeting {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 12px;
+  margin-bottom: 12px;
+  position: relative;
+  background-color: #fdfdfd;
+}
+
+.meeting-title {
+  font-weight: bold;
+  color: #1a1a2e;
+}
+
+.meeting-time {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.meeting.active {
+  border-color: #3c3b6e;
+  background-color: #eef1ff;
+}
+
+.badge-now {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: crimson;
+  color: white;
+  font-size: 0.7rem;
+  padding: 3px 8px;
+  border-radius: 12px;
+}
+
+/* Connect Section */
+.connect-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.connect-item {
+  display: block;
+  padding: 10px;
+  background: #3c3b6e;
+  color: white;
+  text-align: center;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.connect-item:hover {
+  background: #1a1a2e;
+}
+
+/* Upcoming Conference Button */
+#notifyBtn {
+  background: #3c3b6e;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+#notifyBtn:hover {
+  background: #1a1a2e;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .events-grid {
+    grid-template-columns: 1fr;
+  }
+}
