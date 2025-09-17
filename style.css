@@ -282,3 +282,194 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
+
+
+/* =========================
+   Support Page Styles
+   ========================= */
+
+/* Support Options */
+.support-options {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  padding: 20px;
+  background-color: #f0f0f0;
+}
+
+.support-options .quick-link-btn {
+  background: #fff;
+  border: 2px solid #3c3b6e;
+  color: #3c3b6e;
+  padding: 10px 16px;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.support-options .quick-link-btn:hover {
+  background: #3c3b6e;
+  color: white;
+}
+
+/* Contact Form */
+.contact-form {
+  max-width: 800px;
+  margin: 40px auto;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.contact-form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.contact-form .form-row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.contact-form .form-row input {
+  flex: 1;
+  min-width: 200px;
+}
+
+.contact-form button {
+  margin-top: 15px;
+  background: #3c3b6e;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+  background: #1a1a2e;
+}
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.modal.show {
+  display: flex;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 500px;
+  width: 90%;
+  position: relative;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transform: translateY(-20px);
+  transition: transform 0.3s ease;
+}
+
+.modal.show .modal-content {
+  transform: translateY(0);
+}
+
+.close-modal {
+  position: absolute;
+  top: 10px; right: 15px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #333;
+}
+
+.close-modal:hover {
+  color: crimson;
+}
+
+.char-count {
+  font-size: 0.85rem;
+  color: #777;
+  margin-top: 5px;
+  text-align: right;
+}
+
+/* =========================
+   Unified Form Styling
+   ========================= */
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  background-color: #fff;
+}
+
+form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+form button {
+  margin-top: 10px;
+  background: #3c3b6e;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+form button:hover {
+  background: #1a1a2e;
+}
+
+/* Optional: Character Counter */
+.char-count {
+  font-size: 0.85rem;
+  color: #777;
+  text-align: right;
+  margin-top: -5px;
+}
+
