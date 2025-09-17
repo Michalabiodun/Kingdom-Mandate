@@ -106,3 +106,81 @@ if (notifyBtn) {
     alert('You will be notified when conference details are announced.');
   });
 }
+
+
+// Prayer Request Modal Logic
+const prayerModal = document.getElementById('prayerModal');
+const openPrayerModal = document.getElementById('openPrayerModal');
+const closePrayerModal = document.getElementById('closePrayerModal');
+
+if (openPrayerModal && prayerModal && closePrayerModal) {
+  openPrayerModal.addEventListener('click', () => {
+    prayerModal.style.display = 'flex';
+  });
+
+  closePrayerModal.addEventListener('click', () => {
+    prayerModal.style.display = 'none';
+  });
+
+  window.addEventListener('click', (e) => {
+    if (e.target === prayerModal) {
+      prayerModal.style.display = 'none';
+    }
+  });
+}
+
+// Prayer Request character counter
+const prayerTextarea = document.querySelector('.prayer-request-form textarea');
+const charCount = document.querySelector('.char-count');
+if (prayerTextarea && charCount) {
+  prayerTextarea.addEventListener('input', () => {
+    charCount.textContent = `${prayerTextarea.value.length} / 165`;
+  });
+}
+
+// Prayer Request submit confirmation
+const sendPrayerBtn = document.getElementById('sendPrayerBtn');
+if (sendPrayerBtn) {
+  sendPrayerBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    alert('Thank you! Your prayer request has been sent.');
+    prayerModal.style.display = 'none';
+  });
+}
+
+
+// Reusable Modal Logic
+const modalButtons = document.querySelectorAll('[data-modal]');
+const modals = document.querySelectorAll('.modal');
+const closeButtons = document.querySelectorAll('.close-modal');
+
+// Open modal
+modalButtons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const modalId = btn.getAttribute('data-modal');
+    const modal = document.getElementById(modalId);
+    if (modal) modal.classList.add('show');
+  });
+});
+
+// Close modal on X click
+closeButtons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    btn.closest('.modal').classList.remove('show');
+    setTimeout(() => btn.closest('.modal').style.display = '', 300);
+  });
+});
+
+// Close modal on outside click
+window.addEventListener('click', (e) => {
+  modals.forEach(modal => {
+    if (e.target === modal) {
+      modal.classList.remove('show');
+      setTimeout(() => modal.style.display = '', 300);
+    }
+  });
+});
+
+// Prayer Request character counter
+const prayerModalTextarea = document.querySelector('#prayerModal textarea');
+const prayerCharCount = document.querySelector('#prayerModal .char'-count);
