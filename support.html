@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kingdom Mandate — Support</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">Kingdom Mandate</div>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="events.html">Events</a>
+      <a href="support.html" class="active">Support</a>
+      <a href="#">More</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h1>Contact & Support</h1>
+    <p>We’re here to connect, pray, and support you in your Kingdom journey.</p>
+  </section>
+
+  <!-- Support Options -->
+  <section class="support-options">
+    <button class="quick-link-btn" data-modal="oneToOneModal">Book a One‑to‑One Session</button>
+    <button class="quick-link-btn" data-modal="prayerModal">Submit a Prayer Request</button>
+    <button class="quick-link-btn" data-modal="messageModal">Send us a Message</button>
+  </section>
+
+  <!-- Contact Form -->
+  <main>
+    <form class="contact-form">
+      <div class="form-row">
+        <input type="text" placeholder="First Name *" required>
+        <input type="text" placeholder="Last Name *" required>
+      </div>
+      <input type="email" placeholder="Email Address *" required>
+      <input type="text" placeholder="Subject">
+      <textarea placeholder="Your Message *" required></textarea>
+      <button type="submit" id="submitFormBtn">Submit Form</button>
+    </form>
+  </main>
+
+  <!-- Modals -->
+  <div id="oneToOneModal" class="modal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <h2>Book a One‑to‑One Session</h2>
+      <form>
+        <input type="text" placeholder="Full Name *" required>
+        <input type="email" placeholder="Email Address *" required>
+        <input type="tel" placeholder="Phone Number">
+        <textarea placeholder="Your Request *" required></textarea>
+        <button type="submit">Book Session</button>
+      </form>
+    </div>
+  </div>
+
+  <div id="prayerModal" class="modal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <h2>Prayer Request</h2>
+      <p>Send your prayer request today and let us stand with you in faith.</p>
+      <form>
+        <input type="text" placeholder="First Name *" required>
+        <input type="email" placeholder="Email Address">
+        <input type="tel" placeholder="Phone Number">
+        <textarea maxlength="165" placeholder="Enter your message..." required></textarea>
+        <div class="char-count">0 / 165</div>
+        <button type="submit">Send Your Request</button>
+      </form>
+    </div>
+  </div>
+
+  <div id="messageModal" class="modal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <h2>Send us a Message</h2>
+      <form>
+        <input type="text" placeholder="Full Name *" required>
+        <input type="email" placeholder="Email Address *" required>
+        <textarea placeholder="Your Message *" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    © 2025 Kingdom Mandate | All rights reserved.
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
