@@ -2,34 +2,44 @@
 // Quick Links
 // --------------------
 const quickLinks = [
-  "Connect & Engage",
-  "Testimonies",
-  "Morning Prayerline",
-  "Book a 1:1 Session",
-  "Bible Calendar",
-  "Prayerline Playback",
-  "Prayer Request",
-  "Livestream"
+  { text: "Prayer Request", link: "./support.html" },
+  { text: "Testimonies" },
+  { text: "Morning Prayerline" },
+  { text: "Book a 1:1 Session", link: "./support.html" }, 
+  { text: "Prayerline Playback" },
+  { text: "Donate to the ministry" },
+  { text: "Livestream" }
 ];
 
 const quickLinksContainer = document.getElementById("quick-links");
 if (quickLinksContainer) {
-  quickLinks.forEach(text => {
+  quickLinks.forEach(item => {
     const btn = document.createElement("button");
     btn.className = "quick-link-btn";
-    btn.textContent = text;
-    quickLinksContainer.appendChild(btn);
+
+    if (item.link) {
+      // If link exists, wrap button inside an anchor
+      btn.textContent = item.text;
+      const anchor = document.createElement("a");
+      anchor.href = item.link;
+      anchor.appendChild(btn);
+      quickLinksContainer.appendChild(anchor);
+    } else {
+      btn.textContent = item.text;
+      quickLinksContainer.appendChild(btn);
+    }
   });
 }
+
 
 // --------------------
 // Feature Grid
 // --------------------
 const features = [
-  { title: "Kingdom Mandate TV", date: "Every Sunday" },
+  { title: "Kingdom Mandate TV", date: "Every Sunday", link: "https://www.youtube.com/" },
   { title: "Morning Prayerline", date: "Weekdays 6AM" },
-  { title: "Events", date: "Monthly Gatherings" },
-  { title: "Support", date: "Partner with Us" }
+  { title: "Events", date: "Monthly Gatherings", link: "/events.html" },
+  { title: "Support", date: "Partner with Us", link: "/support.html" },
 ];
 
 const featuresContainer = document.getElementById("features");
@@ -37,10 +47,23 @@ if (featuresContainer) {
   features.forEach(item => {
     const box = document.createElement("div");
     box.className = "feature-box";
-    box.innerHTML = `<h3>${item.title}</h3><p>${item.date}</p>`;
+
+    // If a link exists, wrap it in <a>
+    if (item.link) {
+      box.innerHTML = `
+        <a href="${item.link}" class="feature-link">
+          <h3>${item.title}</h3>
+          <p>${item.date}</p>
+        </a>
+      `;
+    } else {
+      box.innerHTML = `<h3>${item.title}</h3><p>${item.date}</p>`;
+    }
+
     featuresContainer.appendChild(box);
   });
 }
+
 
 // --------------------
 // Prayer Meetings
