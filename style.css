@@ -24,7 +24,7 @@ body {
 }
 
 .logo {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   font-weight: bold;
   letter-spacing: 1px;
 }
@@ -483,5 +483,6 @@ form button:hover {
   text-align: right;
   margin-top: -5px;
 }
+
 
 
