@@ -3,12 +3,12 @@
 // --------------------
 const quickLinks = [
   { text: "Prayer Request", link: "./support.html" },
-  { text: "Testimonies" },
-  { text: "Morning Prayerline" },
+  { text: "Testimonies", link: "" },
+  // { text: "Morning Prayerline" },
   { text: "Book a 1:1 Session", link: "./support.html" }, 
-  { text: "Prayerline Playback" },
-  { text: "Donate to the ministry" },
-  { text: "Livestream" }
+  // { text: "Prayerline Playback" },
+  { text: "Give Now" },
+  // { text: "Livestream" }
 ];
 
 const quickLinksContainer = document.getElementById("quick-links");
@@ -36,7 +36,7 @@ if (quickLinksContainer) {
 // Feature Grid
 // --------------------
 const features = [
-  { title: "Connect with us on YouTube", date: "Every Sunday", link: "https://www.youtube.com/" },
+  { title: "Kingdom Mandate TV", date: "Every Sunday", link: "https://www.youtube.com/" },
   { title: "Morning Prayerline", date: "Weekdays 6AM" },
   { title: "Events", date: "Monthly Gatherings", link: "/events.html" },
   { title: "Support", date: "Partner with Us", link: "/support.html" },
@@ -69,11 +69,12 @@ if (featuresContainer) {
 // Prayer Meetings
 // --------------------
 const MEETINGS = [
-  { title:'Daily Morning Devotional', time:'05:00-05:45', days:[0,1,2,3,4,5,6] },
-  { title:'Praying Parents', time:'18:30-19:30', days:[0,1,2,3,4,5,6] },
-  { title:'Midnight Prayer', time:'00:00-01:00', days:[0,1,2,3,4,5,6] },
+  // { title:'Daily Morning Devotional', time:'05:00-05:45', days:[0,1,2,3,4,5,6] },
+  { title:'Wednesday (Praying Parents)', time:'18:30-19:40', days:[3] },
+  { title:'Midnight Prayer', time:'23:59-01:00', days:[0,1,2,3,4,5,6] },
   { title:'Tuesday Prayer Time', time:'21:00-22:00', days:[2] },
-  { title:'Thursday Prayer Meeting', time:'20:00-21:00', days:[4] }
+  { title:'Friday Prayer Meeting', time:'5:30-7:00', days:[5] },
+  { title:'Sunday Service', time:'11:59-13:00', days:[0] },
 ];
 
 const pad = n => String(n).padStart(2,'0');
