@@ -72,7 +72,7 @@ const MEETINGS = [
   // { title:'Daily Morning Devotional', time:'05:00-05:45', days:[0,1,2,3,4,5,6] },
   { title:'Wednesday (Praying Parents)', time:'18:30-19:40', days:[3] },
   { title:'Midnight Prayer', time:'23:59-01:00', days:[0,1,2,3,4,5,6] },
-  { title:'Tuesday Prayer Time', time:'21:00-22:00', days:[2] },
+  // { title:'Tuesday Prayer Time', time:'21:00-22:00', days:[2] },
   { title:'Friday Prayer Meeting', time:'5:30-7:00', days:[5] },
   { title:'Sunday Service', time:'11:59-13:00', days:[0] },
 ];
@@ -208,4 +208,5 @@ window.addEventListener('click', (e) => {
 // Prayer Request character counter
 const prayerModalTextarea = document.querySelector('#prayerModal textarea');
 const prayerCharCount = document.querySelector('#prayerModal .char'-count);
+
 
