@@ -36,7 +36,7 @@ if (quickLinksContainer) {
 // Feature Grid
 // --------------------
 const features = [
-  { title: "Kingdom Mandate TV", date: "Every Sunday", link: "https://youtube.com/@kingdommandateoutreach-k6d9f?si=f3jAN7kSNTdnh_4q" target="_blank" },
+  { title: "Kingdom Mandate TV", date: "Every Sunday", link: "https://youtube.com/@kingdommandateoutreach-k6d9f?si=f3jAN7kSNTdnh_4q"},
   { title: "Morning Prayerline", date: "Weekdays 6AM" },
   { title: "Events", date: "Monthly Gatherings", link: "/events.html" },
   { title: "Support", date: "Partner with Us", link: "/support.html" },
@@ -208,6 +208,7 @@ window.addEventListener('click', (e) => {
 // Prayer Request character counter
 const prayerModalTextarea = document.querySelector('#prayerModal textarea');
 const prayerCharCount = document.querySelector('#prayerModal .char'-count);
+
 
 
 
