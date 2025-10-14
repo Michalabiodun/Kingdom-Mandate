@@ -6,44 +6,69 @@
   <title>Kingdom Mandate — Home</title>
   <link rel="stylesheet" href="style.css" />
 </head>
+ 
+  <style>
+.loader {
+  --w:10ch;
+  font-weight: bold;
+  font-family: monospace;
+  font-size: 30px;
+  line-height: 1.4em;
+  letter-spacing: var(--w);
+  width: var(--w);
+  overflow: hidden;
+  white-space: nowrap;
+  color: #0000;
+  text-shadow: 
+        calc( 0*var(--w)) 0 #000,calc(-1*var(--w)) 0 #000,calc(-2*var(--w)) 0 #000,calc(-3*var(--w)) 0 #000,calc(-4*var(--w)) 0 #000, 
+        calc(-5*var(--w)) 0 #000,calc(-6*var(--w)) 0 #000,calc(-7*var(--w)) 0 #000,calc(-8*var(--w)) 0 #000,calc(-9*var(--w)) 0 #000;
+  animation: l20 2s infinite linear;
+}
+.loader:before {
+  content:"Loading...";
+}
+
+@keyframes l20 {
+  9.09% {text-shadow: 
+        calc( 0*var(--w)) -10px #000,calc(-1*var(--w)) 0 #000,calc(-2*var(--w)) 0 #000,calc(-3*var(--w)) 0 #000,calc(-4*var(--w)) 0 #000, 
+        calc(-5*var(--w)) 0 #000,calc(-6*var(--w)) 0 #000,calc(-7*var(--w)) 0 #000,calc(-8*var(--w)) 0 #000,calc(-9*var(--w)) 0 #000}
+  18.18% {text-shadow: 
+        calc( 0*var(--w)) 0 #000,calc(-1*var(--w)) -10px #000,calc(-2*var(--w)) 0 #000,calc(-3*var(--w)) 0 #000,calc(-4*var(--w)) 0 #000, 
+        calc(-5*var(--w)) 0 #000,calc(-6*var(--w)) 0 #000,calc(-7*var(--w)) 0 #000,calc(-8*var(--w)) 0 #000,calc(-9*var(--w)) 0 #000}
+  27.27% {text-shadow: 
+        calc( 0*var(--w)) 0 #000,calc(-1*var(--w)) 0 #000,calc(-2*var(--w)) -10px #000,calc(-3*var(--w)) 0 #000,calc(-4*var(--w)) 0 #000, 
+        calc(-5*var(--w)) 0 #000,calc(-6*var(--w)) 0 #000,calc(-7*var(--w)) 0 #000,calc(-8*var(--w)) 0 #000,calc(-9*var(--w)) 0 #000}
+  36.36% {text-shadow: 
+        calc( 0*var(--w)) 0 #000,calc(-1*var(--w)) 0 #000,calc(-2*var(--w)) 0 #000,calc(-3*var(--w)) -10px #000,calc(-4*var(--w)) 0 #000, 
+        calc(-5*var(--w)) 0 #000,calc(-6*var(--w)) 0 #000,calc(-7*var(--w)) 0 #000,calc(-8*var(--w)) 0 #000,calc(-9*var(--w)) 0 #000}
+  45.45% {text-shadow: 
+        calc( 0*var(--w)) 0 #000,calc(-1*var(--w)) 0 #000,calc(-2*var(--w)) 0 #000,calc(-3*var(--w)) 0 #000,calc(-4*var(--w)) -10px #000, 
+        calc(-5*var(--w)) 0 #000,calc(-6*var(--w)) 0 #000,calc(-7*var(--w)) 0 #000,calc(-8*var(--w)) 0 #000,calc(-9*var(--w)) 0 #000}
+  54.54% {text-shadow: 
+        calc( 0*var(--w)) 0 #000,calc(-1*var(--w)) 0 #000,calc(-2*var(--w)) 0 #000,calc(-3*var(--w)) 0 #000,calc(-4*var(--w)) 0 #000, 
+        calc(-5*var(--w)) -10px #000,calc(-6*var(--w)) 0 #000,calc(-7*var(--w)) 0 #000,calc(-8*var(--w)) 0 #000,calc(-9*var(--w)) 0 #000}
+  63.63% {text-shadow: 
+        calc( 0*var(--w)) 0 #000,calc(-1*var(--w)) 0 #000,calc(-2*var(--w)) 0 #000,calc(-3*var(--w)) 0 #000,calc(-4*var(--w)) 0 #000, 
+        calc(-5*var(--w)) 0 #000,calc(-6*var(--w)) -10px #000,calc(-7*var(--w)) 0 #000,calc(-8*var(--w)) 0 #000,calc(-9*var(--w)) 0 #000}
+  72.72% {text-shadow: 
+        calc( 0*var(--w)) 0 #000,calc(-1*var(--w)) 0 #000,calc(-2*var(--w)) 0 #000,calc(-3*var(--w)) 0 #000,calc(-4*var(--w)) 0 #000, 
+        calc(-5*var(--w)) 0 #000,calc(-6*var(--w)) 0 #000,calc(-7*var(--w)) -10px #000,calc(-8*var(--w)) 0 #000,calc(-9*var(--w)) 0 #000}
+  81.81% {text-shadow: 
+        calc( 0*var(--w)) 0 #000,calc(-1*var(--w)) 0 #000,calc(-2*var(--w)) 0 #000,calc(-3*var(--w)) 0 #000,calc(-4*var(--w)) 0 #000, 
+        calc(-5*var(--w)) 0 #000,calc(-6*var(--w)) 0 #000,calc(-7*var(--w)) 0 #000,calc(-8*var(--w)) -10px #000,calc(-9*var(--w)) 0 #000}
+  90.90% {text-shadow: 
+        calc( 0*var(--w)) 0 #000,calc(-1*var(--w)) 0 #000,calc(-2*var(--w)) 0 #000,calc(-3*var(--w)) 0 #000,calc(-4*var(--w)) 0 #000, 
+        calc(-5*var(--w)) 0 #000,calc(-6*var(--w)) 0 #000,calc(-7*var(--w)) 0 #000,calc(-8*var(--w)) 0 #000,calc(-9*var(--w)) -10px #000}
+}
+</style>
 <body>
+<h6>The website is temporarily unable to service your request as it exceeded resource limit. Please try again later.</h6>
+ <div class="loader"></div>
 
 
-
-  <!-- Header -->
-  <header class="header">
-    <div class="logo">Kingdom Mandate Outreach <br> <span>Tree of Life</span></div>
-    <nav class="nav">
-      <a href="index.html" class="active">Home</a>
-      <a href="">Events</a>
-      <a href="">Support</a>
-      <a href="">About us</a>
-    </nav>
-  </header>
-
-  <!-- Quick Links -->
-  <section class="quick-links" id="quick"></section>
-
-  <!-- Hero -->
-  <section class="hero">
-    <h1>The website is temporarily unable to service your request as it exceeded resource limit. Please try again later.</h1>
-    <div class="hero-buttons">
-     
-      <a href=""><button></button>
-    </div>
-  </section> 
-
-  <!-- Features -->
-  <section class="features" id=""></section>
-
-  <!-- Footer -->
-  <footer class="footer">
-    © 2025 Kingdom Mandate | All rights reserved.
-  </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
+
 
 
 
